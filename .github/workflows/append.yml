@@ -31,7 +31,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add readingList.csv
+          git add data
           git commit -m "Automated reading list update on $(date)"
           git push -u origin master
 
