@@ -1,0 +1,40 @@
+name: Append article to reading list
+
+on:
+  repository_dispatch:
+    types: ["rl-append"]
+
+concurrency:
+  group: append-to-reading-list
+
+jobs:
+  append-to-reading-list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.18
+
+      - name: Append to reading list
+        env:
+          RL_INPUT_JSON: ${{ toJSON(github.event.client_payload) }}
+        run: go run github.com/chyroc/reading-list/cmd add
+
+      - name: Commit changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add readingList.csv
+          git commit -m "Automated reading list update on $(date)"
+          git push -u origin master
+
+  build-site:
+    needs: append-to-reading-list
+    uses: ./.github/workflows/build.yml
