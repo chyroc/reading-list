@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -10,12 +9,10 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/chyroc/reading-list/transport"
-	"github.com/jszwec/csvutil"
 )
 
-func AddRowToCSV() error {
-	data := new(transport.Inputs)
+func AddURL() error {
+	data := new(Inputs)
 	if err := loadInputs(data); err != nil {
 		return err
 	}
@@ -29,52 +26,20 @@ func AddRowToCSV() error {
 		fmt.Fprintf(os.Stderr, "Unable to get html title for URL %s\n", data.URL)
 	}
 
-	// if CSV file does not exist, create it with a header
-	csvFilePath := readingListFile
-	{
-		_, err := os.Stat(csvFilePath)
-		if os.IsNotExist(err) {
-
-			b, err := csvutil.Marshal([]*readingListEntry{})
-			if err != nil {
-				return err
-			}
-
-			err = ioutil.WriteFile(csvFilePath, b, 0644)
-			if err != nil {
-				return err
-			}
-
-		}
-	}
-
-	// make changes to CSV file
-
-	f, err := os.OpenFile(csvFilePath, os.O_APPEND|os.O_WRONLY, 0644)
-	if err != nil {
-		return err
-	}
-
-	b, err := csvutil.Marshal([]*readingListEntry{{
+	name := fmt.Sprintf("./data/%s.json", urlHash(data.URL))
+	body, _ := json.MarshalIndent(readingListEntry{
 		URL:   data.URL,
 		Title: title,
-		Date:  time.Now(),
-	}})
-	if err != nil {
-		return err
+		Date:  time.Now().Format(dateFormat),
+	}, "", "  ")
+
+	f, _ := os.Stat(name)
+	if f != nil {
+		fmt.Println("url already exists")
+		return nil
 	}
 
-	splitOutput := bytes.Split(b, []byte("\n"))
-
-	if _, err = f.Write(append(splitOutput[1], byte('\n'))); err != nil {
-		return err
-	}
-
-	if err = f.Close(); err != nil {
-		return err
-	}
-
-	return nil
+	return ioutil.WriteFile(name, body, 0644)
 }
 
 func loadInputs(data any) error {

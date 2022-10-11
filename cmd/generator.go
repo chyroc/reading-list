@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	_ "embed"
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -10,13 +11,68 @@ import (
 	"strings"
 	"time"
 
-	"github.com/jszwec/csvutil"
 	g "github.com/maragudk/gomponents"
 	c "github.com/maragudk/gomponents/components"
 	. "github.com/maragudk/gomponents/html"
 )
 
-const dateFormat = "2006-01-02"
+func GenerateSite() error {
+	entries, err := loadData()
+	if err != nil {
+		return err
+	}
+
+	numArticles := len(entries)
+	groupedEntries := groupEntriesByMonth(entries)
+
+	head := Div(
+		H1(g.Text(pageTitle)),
+		P(g.Raw(
+			fmt.Sprintf(
+				"A mostly complete list of articles I've read on the internet.<br>The articles on this list do not necessarily represent my views or opinions and should not be construed as doing so.<br><br>There are currently %d entries in the list<br>Last modified %s<br>Repo: %s",
+				numArticles,
+				time.Now().Format(dateFormat),
+				"<a href=\"https://github.com/chyroc/reading-list\" rel=\"noopener\"><code>chyroc/reading-list</code></a>",
+			),
+		)),
+	)
+
+	listing := makeListHTML(groupedEntries)
+
+	outputContent, err := renderHTMLPage(pageTitle, []g.Node{head, Hr(), listing})
+	if err != nil {
+		return err
+	}
+
+	const outputDir = ".site"
+	_ = os.Mkdir(outputDir, 0777)
+	return ioutil.WriteFile(outputDir+"/index.html", outputContent, 0644)
+}
+
+func loadData() ([]*readingListEntry, error) {
+	files, err := ioutil.ReadDir("./data")
+	if err != nil {
+		return nil, err
+	}
+
+	entries := make([]*readingListEntry, 0, len(files))
+	for _, v := range files {
+		if v.IsDir() || !strings.HasSuffix(v.Name(), ".json") {
+			continue
+		}
+		bs, err := ioutil.ReadFile("./data/" + v.Name())
+		if err != nil {
+			return nil, err
+		}
+		var entry readingListEntry
+		err = json.Unmarshal(bs, &entry)
+		if err != nil {
+			return nil, err
+		}
+		entries = append(entries, &entry)
+	}
+	return entries, nil
+}
 
 // renderHTMLPage renders a complete HTML page
 func renderHTMLPage(title string, body []g.Node) ([]byte, error) {
@@ -61,7 +117,9 @@ func (e entrySlice) Len() int {
 }
 
 func (e entrySlice) Less(i, j int) bool {
-	return e[i].Date.After(e[j].Date)
+	ii, _ := time.Parse(dateFormat, e[i].Date)
+	jj, _ := time.Parse(dateFormat, e[j].Date)
+	return ii.After(jj)
 }
 
 func (e entrySlice) Swap(i, j int) {
@@ -72,7 +130,11 @@ func groupEntriesByMonth(entries []*readingListEntry) entryGroupSlice {
 	groupMap := make(map[time.Time]*entryGroup)
 
 	for _, entry := range entries {
-		newTime := time.Date(entry.Date.Year(), entry.Date.Month(), 1, 0, 0, 0, 0, time.UTC)
+		date, err := time.Parse(dateFormat, entry.Date)
+		if err != nil {
+			continue
+		}
+		newTime := time.Date(date.Year(), date.Month(), 1, 0, 0, 0, 0, time.UTC)
 		if groupMap[newTime] == nil {
 			groupMap[newTime] = &entryGroup{
 				Date:  newTime,
@@ -125,13 +187,11 @@ func makeListHTML(groups []*entryGroup) g.Node {
 
 		var entries []g.Node
 		for _, article := range group.Entries {
-
 			entries = append(entries, articleLinkComponent(
 				article.URL,
 				article.Title,
-				article.Date.Format(dateFormat)),
+				article.Date),
 			)
-
 		}
 
 		parts = append(parts, header, Ul(entries...))
@@ -145,50 +205,4 @@ func articleLinkComponent(url, title, date string) g.Node {
 		A(g.Attr("href", url), g.Text(title)),
 		g.Text(" - "+date),
 	)
-}
-
-func GenerateSite() error {
-
-	const outputDir = ".site"
-
-	// read CSV file
-	var entries []*readingListEntry
-
-	fcont, err := ioutil.ReadFile(readingListFile)
-	if err != nil {
-		return err
-	}
-
-	err = csvutil.Unmarshal(fcont, &entries)
-	if err != nil {
-		return err
-	}
-
-	numArticles := len(entries)
-	groupedEntries := groupEntriesByMonth(entries)
-
-	const pageTitle = "akp's reading list"
-
-	head := Div(
-		H1(g.Text(pageTitle)),
-		P(g.Raw(
-			fmt.Sprintf(
-				"A mostly complete list of articles I've read on the internet.<br>The articles on this list do not necessarily represent my views or opinions and should not be construed as doing so.<br><br>There are currently %d entries in the list<br>Last modified %s<br>Repo: %s",
-				numArticles,
-				time.Now().Format(dateFormat),
-				"<a href=\"https://github.com/chyroc/reading-list\" rel=\"noopener\"><code>chyroc/reading-list</code></a>",
-			),
-		)),
-	)
-
-	listing := makeListHTML(groupedEntries)
-
-	outputContent, err := renderHTMLPage(pageTitle, []g.Node{head, Hr(), listing})
-	if err != nil {
-		return err
-	}
-
-	_ = os.Mkdir(outputDir, 0777)
-
-	return ioutil.WriteFile(outputDir+"/index.html", outputContent, 0644)
 }

@@ -4,16 +4,9 @@ import (
 	"errors"
 	"fmt"
 	"os"
-	"time"
 )
 
-const readingListFile = "readingList.csv"
-
-type readingListEntry struct {
-	URL   string    `csv:"url,omitempty"`
-	Title string    `csv:"title,omitempty"`
-	Date  time.Time `csv:"date,omitempty"`
-}
+const pageTitle = "chyroc's reading list"
 
 func run() error {
 	if len(os.Args) == 1 || !(os.Args[1] == "add" || os.Args[1] == "generateSite") {
@@ -24,7 +17,7 @@ func run() error {
 
 	switch os.Args[1] {
 	case "add":
-		f = AddRowToCSV
+		f = AddURL
 	case "generateSite":
 		f = GenerateSite
 	default:
