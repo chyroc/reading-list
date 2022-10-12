@@ -3,13 +3,12 @@ module github.com/chyroc/reading-list
 go 1.18
 
 require (
+	github.com/PuerkitoBio/goquery v1.8.0
 	github.com/go-playground/validator v9.31.0+incompatible
-	github.com/jszwec/csvutil v1.5.0
 	github.com/maragudk/gomponents v0.18.0
 )
 
 require (
-	github.com/PuerkitoBio/goquery v1.8.0 // indirect
 	github.com/andybalholm/cascadia v1.3.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect

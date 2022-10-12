@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
@@ -21,25 +22,59 @@ func AddURL() error {
 		return err
 	}
 
-	title, err := getHtmlTitle(data.URL)
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Unable to get html title for URL %s\n", data.URL)
+	err1 := addOne(data.URL, time.Now().Format(dateFormat), false)
+	err2 := reGenerate()
+	if err1 != nil {
+		return err1
 	}
+	if err2 != nil {
+		return err2
+	}
+	return nil
+}
 
-	name := fmt.Sprintf("./data/%s.json", urlHash(data.URL))
+func addOne(url string, date string, ignoreData bool) error {
+	fmt.Println("url", url)
+
+	title, err := getHtmlTitle(url)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Unable to get html title for URL %s, %s\n", url, err)
+	}
+	fmt.Println("title", title)
+
+	name := fmt.Sprintf("./data/%s.json", urlHash(url))
 	body, _ := json.MarshalIndent(readingListEntry{
-		URL:   data.URL,
+		URL:   url,
 		Title: title,
-		Date:  time.Now().Format(dateFormat),
+		Date:  date,
 	}, "", "  ")
 
-	f, _ := os.Stat(name)
-	if f != nil {
-		fmt.Println("url already exists")
-		return nil
+	if !ignoreData {
+		f, _ := os.Stat(name)
+		if f != nil {
+			fmt.Println("url already exists")
+			return nil
+		}
 	}
 
 	return ioutil.WriteFile(name, body, 0644)
+}
+
+func reGenerate() error {
+	entities, err := loadData()
+	if err != nil {
+		return err
+	}
+	for _, v := range entities {
+		if strings.TrimSpace(v.Title) == "" {
+			fmt.Println("empty title", v.URL)
+			err = addOne(v.URL, v.Date, true)
+			if err != nil {
+				return err
+			}
+		}
+	}
+	return nil
 }
 
 func loadInputs(data any) error {
@@ -62,7 +97,24 @@ func getHtmlTitle(url string) (string, error) {
 		return "", err
 	}
 
-	return doc.Find("title").Text(), nil
+	title := strings.TrimSpace(doc.Find("title").Text())
+	if title != "" {
+		return title, nil
+	}
+
+	// og:title
+	title = strings.TrimSpace(doc.Find("meta[property='og:title']").AttrOr("content", ""))
+	if title != "" {
+		return title, nil
+	}
+
+	// twitter:title
+	title = strings.TrimSpace(doc.Find("meta[name='twitter:title']").AttrOr("content", ""))
+	if title != "" {
+		return title, nil
+	}
+
+	return "", nil
 }
 
 var httpClient = &http.Client{

@@ -2,7 +2,10 @@ package main
 
 import (
 	"crypto/sha256"
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
+	"strings"
 
 	"github.com/go-playground/validator"
 )
@@ -27,4 +30,29 @@ type readingListEntry struct {
 	URL   string `csv:"url,omitempty"`
 	Title string `csv:"title,omitempty"`
 	Date  string `csv:"date,omitempty"`
+}
+
+func loadData() ([]*readingListEntry, error) {
+	files, err := ioutil.ReadDir("./data")
+	if err != nil {
+		return nil, err
+	}
+
+	entries := make([]*readingListEntry, 0, len(files))
+	for _, v := range files {
+		if v.IsDir() || !strings.HasSuffix(v.Name(), ".json") {
+			continue
+		}
+		bs, err := ioutil.ReadFile("./data/" + v.Name())
+		if err != nil {
+			return nil, err
+		}
+		var entry readingListEntry
+		err = json.Unmarshal(bs, &entry)
+		if err != nil {
+			return nil, err
+		}
+		entries = append(entries, &entry)
+	}
+	return entries, nil
 }

@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	_ "embed"
-	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -47,31 +46,6 @@ func GenerateSite() error {
 	const outputDir = ".site"
 	_ = os.Mkdir(outputDir, 0777)
 	return ioutil.WriteFile(outputDir+"/index.html", outputContent, 0644)
-}
-
-func loadData() ([]*readingListEntry, error) {
-	files, err := ioutil.ReadDir("./data")
-	if err != nil {
-		return nil, err
-	}
-
-	entries := make([]*readingListEntry, 0, len(files))
-	for _, v := range files {
-		if v.IsDir() || !strings.HasSuffix(v.Name(), ".json") {
-			continue
-		}
-		bs, err := ioutil.ReadFile("./data/" + v.Name())
-		if err != nil {
-			return nil, err
-		}
-		var entry readingListEntry
-		err = json.Unmarshal(bs, &entry)
-		if err != nil {
-			return nil, err
-		}
-		entries = append(entries, &entry)
-	}
-	return entries, nil
 }
 
 // renderHTMLPage renders a complete HTML page
