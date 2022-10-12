@@ -21,6 +21,7 @@ func (i *Inputs) Validate() error {
 }
 
 const dateFormat = "2006-01-02"
+const dateTimeFormat = "2006-01-02 15:04:05"
 
 func urlHash(uri string) string {
 	return fmt.Sprintf("%x", sha256.Sum256([]byte(uri)))

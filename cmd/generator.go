@@ -91,8 +91,8 @@ func (e entrySlice) Len() int {
 }
 
 func (e entrySlice) Less(i, j int) bool {
-	ii, _ := time.Parse(dateFormat, e[i].Date)
-	jj, _ := time.Parse(dateFormat, e[j].Date)
+	ii, _ := time.Parse(dateTimeFormat, e[i].Date)
+	jj, _ := time.Parse(dateTimeFormat, e[j].Date)
 	return ii.After(jj)
 }
 
@@ -104,7 +104,7 @@ func groupEntriesByMonth(entries []*readingListEntry) entryGroupSlice {
 	groupMap := make(map[time.Time]*entryGroup)
 
 	for _, entry := range entries {
-		date, err := time.Parse(dateFormat, entry.Date)
+		date, err := time.Parse(dateTimeFormat, entry.Date)
 		if err != nil {
 			continue
 		}
@@ -175,8 +175,9 @@ func makeListHTML(groups []*entryGroup) g.Node {
 }
 
 func articleLinkComponent(url, title, date string) g.Node {
+	d, _ := time.Parse(dateTimeFormat, date)
 	return Li(
 		A(g.Attr("href", url), g.Text(title)),
-		g.Text(" - "+date),
+		g.Text(" - "+d.Format(dateFormat)),
 	)
 }

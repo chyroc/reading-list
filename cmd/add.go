@@ -22,7 +22,7 @@ func AddURL() error {
 		return err
 	}
 
-	err1 := addOne(data.URL, time.Now().Format(dateFormat), false)
+	err1 := addOne(data.URL, time.Now().Format(dateTimeFormat), false)
 	err2 := reGenerate()
 	if err1 != nil {
 		return err1
