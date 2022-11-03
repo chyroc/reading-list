@@ -3,6 +3,9 @@ name: Build site
 on:
   workflow_dispatch:
   workflow_call:
+  push:
+    paths:
+      - "cmd/*"
 
 concurrency: # Prevent two instances of this running at once
   group: deploy-to-ghpages
