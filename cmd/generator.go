@@ -45,7 +45,24 @@ func GenerateSite() error {
 
 	const outputDir = ".site"
 	_ = os.Mkdir(outputDir, 0777)
-	return ioutil.WriteFile(outputDir+"/index.html", outputContent, 0644)
+	err = ioutil.WriteFile(outputDir+"/index.html", outputContent, 0644)
+	if err != nil {
+		return err
+	}
+
+	rss, json_, err := generateRSS(entries)
+	if err != nil {
+		return err
+	}
+	err = ioutil.WriteFile(outputDir+"/rss.xml", []byte(rss), 0644)
+	if err != nil {
+		return err
+	}
+	err = ioutil.WriteFile(outputDir+"/rss.json", []byte(json_), 0644)
+	if err != nil {
+		return err
+	}
+	return nil
 }
 
 // renderHTMLPage renders a complete HTML page
