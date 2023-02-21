@@ -1,0 +1,487 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "chyroc's reading list",
+  "home_page_url": "https://reading-list.chyroc.cn/",
+  "description": "chyroc's reading list",
+  "author": {
+    "name": "chyroc"
+  },
+  "items": [
+    {
+      "id": "0045ebc93c609fcfb16b2ab60e444f460657445658e36758ae075d21db1c37ff",
+      "url": "https://xie.infoq.cn/article/9177627e96925ef1bd53ee01c?utm_source=rss\u0026utm_medium=article",
+      "title": "Netflix实用API设计(上)",
+      "date_published": "2021-10-15T00:00:00Z",
+      "date_modified": "2021-10-15T00:00:00Z"
+    },
+    {
+      "id": "016cda89a3137b763efc6d0328c3a384b374e73134f52f09562a62cbbbe52259",
+      "url": "https://vimeo.com/97337258",
+      "title": "Scott Meyers - CPU Caches and Why You care on Vimeo",
+      "date_published": "2021-10-09T00:00:00Z",
+      "date_modified": "2021-10-09T00:00:00Z"
+    },
+    {
+      "id": "0363cf3be7e9ee4b2781200fe3e911f9b3b90412a57cc4fae93053375f017b5d",
+      "url": "https://github.com/kardianos/service",
+      "title": "GitHub - kardianos/service: Run go programs as a service on major platforms.",
+      "date_published": "2021-09-24T00:00:00Z",
+      "date_modified": "2021-09-24T00:00:00Z"
+    },
+    {
+      "id": "05b853ba300b6a89789461edf91347fce6154788729a253cc03798291ed89aed",
+      "url": "https://github.com/louislam/uptime-kuma",
+      "title": "GitHub - louislam/uptime-kuma: A fancy self-hosted monitoring tool",
+      "date_published": "2021-10-09T00:00:00Z",
+      "date_modified": "2021-10-09T00:00:00Z"
+    },
+    {
+      "id": "0837ba3834186711134f5aa9479908ba604f36aafae8236449e6084cb97bf0b4",
+      "url": "https://github.com/RedisLabs/redisraft",
+      "title": "GitHub - RedisLabs/redisraft: A Redis Module that make it possible to create a consistent Raft cluster from multiple Redis instances.",
+      "date_published": "2021-09-28T00:00:00Z",
+      "date_modified": "2021-09-28T00:00:00Z"
+    },
+    {
+      "id": "0a5ceb8252f6d32a1e6b024130238f52f1c63d0338cfe282712596906b618822",
+      "url": "https://twitch.pages.dev/zh-CN/",
+      "title": "Twitch 收益排行榜",
+      "date_published": "2021-10-12T00:00:00Z",
+      "date_modified": "2021-10-12T00:00:00Z"
+    },
+    {
+      "id": "0a936800e72cf72584ae733536fe85c6678d6d781790f21ed32c3da217ec8a4a",
+      "url": "https://www.yuque.com/aceld/lfhu8y/rg6nsf",
+      "title": "Easy搞定Golang设计模式 · 语雀",
+      "date_published": "2022-10-17T07:07:51Z",
+      "date_modified": "2022-10-17T07:07:51Z"
+    },
+    {
+      "id": "0bf5493c298a4de4118ea89eeb67441d072632b87b20b5932490cd00f17f2a25",
+      "url": "https://mp.weixin.qq.com/s/bYD8y0gm8DdTlLmoIpHEDg",
+      "title": "我，阿里P7，找不到工作",
+      "date_published": "2022-10-17T03:43:32Z",
+      "date_modified": "2022-10-17T03:43:32Z"
+    },
+    {
+      "id": "0c88cc8d15c81b36226ea6f8bdc910a90304b73145bb516f67b06b329466f057",
+      "url": "https://dev.to/thewraven/universal-macos-binaries-with-go-1-16-3mm3",
+      "title": "Universal macOS binaries with Go 1.16 - DEV Community",
+      "date_published": "2021-10-13T00:00:00Z",
+      "date_modified": "2021-10-13T00:00:00Z"
+    },
+    {
+      "id": "0d4afe647562b0d3ab3d9dc15fc19f07360acc988c9513cf6dea6a632ebd016a",
+      "url": "https://github.com/kopia/kopia",
+      "title": "GitHub - kopia/kopia: Cross-platform backup tool for Windows, macOS \u0026 Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.",
+      "date_published": "2022-05-09T00:00:00Z",
+      "date_modified": "2022-05-09T00:00:00Z"
+    },
+    {
+      "id": "0df019a399998a72f56772a4701f9c6ee190d5afe146db1035fe717792278af5",
+      "url": "https://2d2d.io/s2/warp/",
+      "title": "终端的困境与 Warp 的野心",
+      "date_published": "2022-04-11T00:00:00Z",
+      "date_modified": "2022-04-11T00:00:00Z"
+    },
+    {
+      "id": "0ee7839c01b32c30a5d290fb828e5a9b8dd214b0386554cb2c5b5059670cac9f",
+      "url": "https://github.com/rutikwankhade/CoverView",
+      "title": "GitHub - rutikwankhade/CoverView: 🛠 Create awesome cover images for your blog posts quickly.",
+      "date_published": "2022-05-07T00:00:00Z",
+      "date_modified": "2022-05-07T00:00:00Z"
+    },
+    {
+      "id": "11f3b05cc3cf4a43eec60c47bc800dc8e7d024d73d4f8078225651933fc6a411",
+      "url": "https://sspai.com/post/77549",
+      "title": "行尽白云云里路，满身还带白云归：我的日本行经验分享 - 少数派",
+      "date_published": "2023-01-03T03:02:45Z",
+      "date_modified": "2023-01-03T03:02:45Z"
+    },
+    {
+      "id": "1ac6bb239be2a70bce2bdfba5e76a93d5db6120f00c234da0edb971011bf31ab",
+      "url": "https://www.v2ex.com/t/804977",
+      "title": "准备写一系列 SEO 相关的文章，先放两篇各位瞧瞧 - V2EX",
+      "date_published": "2021-09-28T00:00:00Z",
+      "date_modified": "2021-09-28T00:00:00Z"
+    },
+    {
+      "id": "1bce82dfced7896401991c089ea1919d6a9f68db92d9b654819d168d2289e96c",
+      "url": "https://laike9m.com/blog/jin-ji-nian-wo-zai-zhi-chang-cai-guo-de-keng,143/",
+      "title": "近几年我在职场踩过的坑 - laike9m's blog",
+      "date_published": "2021-10-04T00:00:00Z",
+      "date_modified": "2021-10-04T00:00:00Z"
+    },
+    {
+      "id": "261e18e7f0fd82654fb0904e2a690ac78b28ee4934b5ba42f23370b1fc8d5ae0",
+      "url": "https://blog.cloudflare.com/the-state-of-http-in-2022/",
+      "title": "The state of HTTP in 2022",
+      "date_published": "2023-01-03T03:08:38Z",
+      "date_modified": "2023-01-03T03:08:38Z"
+    },
+    {
+      "id": "278cd49a37b684178349dea3c1cffec314ca4ff5cd61e32db6caf1a8d749d998",
+      "url": "https://hacker-recommended-books.vercel.app/",
+      "title": "HackerNews Readings",
+      "date_published": "2021-09-22T00:00:00Z",
+      "date_modified": "2021-09-22T00:00:00Z"
+    },
+    {
+      "id": "2d8697000d1a628874d290d25c89a1c28fbdb9109d54f1f727295849e87ff8a2",
+      "url": "https://jonegil.github.io/gui-with-gio/",
+      "title": "Overview - Gui with Gio",
+      "date_published": "2021-09-18T00:00:00Z",
+      "date_modified": "2021-09-18T00:00:00Z"
+    },
+    {
+      "id": "2dd5be28c78385ddaf4611528704123be03e5648cadbe381530531c61f5e976f",
+      "url": "https://keg.cs.tsinghua.edu.cn/codegeex/index_zh.html",
+      "title": "CodeGeeX: 多语言代码生成模型",
+      "date_published": "2022-11-14T06:59:40Z",
+      "date_modified": "2022-11-14T06:59:40Z"
+    },
+    {
+      "id": "2df9430a1301baad0d2332b205e9a56998790275034f3871bad268e4178f997f",
+      "url": "https://github.com/IceWhaleTech/CasaOS",
+      "title": "GitHub - IceWhaleTech/CasaOS: CasaOS - A simple, easy-to-use, elegant open-source Home Cloud system.",
+      "date_published": "2022-10-13T02:16:36Z",
+      "date_modified": "2022-10-13T02:16:36Z"
+    },
+    {
+      "id": "30f9bbce086f8af50e69ff001899a0bef5239cae25c3e38bf029e38f1473ce67",
+      "url": "https://fathy.fr/carbonyl",
+      "title": "Forking Chrome to render in a terminal - Fathy Boundjadj",
+      "date_published": "2023-01-29T03:49:15Z",
+      "date_modified": "2023-01-29T03:49:15Z"
+    },
+    {
+      "id": "34e69dfa57479bf28e2dea50a1d6cfc9e5fc9b1b66b7caacc7cbebde3c5c225c",
+      "url": "https://github.com/joelparkerhenderson/monorepo-vs-polyrepo",
+      "title": "GitHub - joelparkerhenderson/monorepo-vs-polyrepo: Monorepo vs. polyrepo: architecture for source code management (SCM) version control systems (VCS)",
+      "date_published": "2021-09-18T00:00:00Z",
+      "date_modified": "2021-09-18T00:00:00Z"
+    },
+    {
+      "id": "365ac4e755a37e1d92d9562e432e3d7c07f20d4941c8c06cda160dee6ce953c1",
+      "url": "https://mtlynch.io/code-review-love/",
+      "title": "How to Make Your Code Reviewer Fall in Love with You ·\nmtlynch.io",
+      "date_published": "2022-10-18T07:57:52Z",
+      "date_modified": "2022-10-18T07:57:52Z"
+    },
+    {
+      "id": "3941af3109067dda6049dab0db6f632c40d3305b9151e858cfe3ebf39c6d18da",
+      "url": "https://github.com/nusr/hacker-laws-zh",
+      "title": "GitHub - nusr/hacker-laws-zh: 💻📖对开发人员有用的定律、理论、原则和模式。(Laws, Theories, Principles and Patterns that developers will find useful.)",
+      "date_published": "2022-02-21T00:00:00Z",
+      "date_modified": "2022-02-21T00:00:00Z"
+    },
+    {
+      "id": "4185406f29a464fb3dfc0e30e2a32142a632cb7cde4a796d1af8b4ba98d66a13",
+      "url": "https://github.com/goplus/gop",
+      "title": "GitHub - goplus/gop: GoPlus - The Go+ language for engineering, STEM education, and data science",
+      "date_published": "2021-10-11T00:00:00Z",
+      "date_modified": "2021-10-11T00:00:00Z"
+    },
+    {
+      "id": "4a5bd22bad31b1957f9213cdc83ddcf4f75957777c40dbedafeeb78d6f8e5ad1",
+      "url": "http://www.ruanyifeng.com/blog/2022/09/weekly-issue-225.html",
+      "title": "科技爱好者周刊（第 225 期）：NPC 演员也是一种职业 - 阮一峰的网络日志",
+      "date_published": "2022-10-12T00:00:00Z",
+      "date_modified": "2022-10-12T00:00:00Z"
+    },
+    {
+      "id": "4e0136cef46671fae42903310b293f51b465c97b9cf6d86b23c6547bb00aca6c",
+      "url": "https://www.bacancytechnology.com/blog/common-mistakes-in-go",
+      "title": "How To Avoid Common Mistakes In Go Programming?",
+      "date_published": "2022-05-05T00:00:00Z",
+      "date_modified": "2022-05-05T00:00:00Z"
+    },
+    {
+      "id": "4fdc043967070550b2b691b3c6157b0d7f1333dde9868d3a5495ba1b797281aa",
+      "url": "https://github.com/zinclabs/zinc",
+      "title": "GitHub - zinclabs/zinc: ZincSearch. A lightweight alternative to elasticsearch that requires minimal resources, written in Go.",
+      "date_published": "2022-06-06T00:00:00Z",
+      "date_modified": "2022-06-06T00:00:00Z"
+    },
+    {
+      "id": "51297114e0c7afd9a3798d761d2ede20aea5a66f7ba0e88eecb048ed8d600c58",
+      "url": "https://youtu.be/mpQZVYPuDGU",
+      "title": "How a DNS Server (Domain Name System) works. - YouTube",
+      "date_published": "2021-10-08T00:00:00Z",
+      "date_modified": "2021-10-08T00:00:00Z"
+    },
+    {
+      "id": "5dbfe6fff874eba43d3af82898cc661f55ada46b626a9e20681f177a73083a08",
+      "url": "https://golangweekly.com/issues/401",
+      "title": "Golang Weekly Issue 401: February 25, 2022",
+      "date_published": "2022-02-26T00:00:00Z",
+      "date_modified": "2022-02-26T00:00:00Z"
+    },
+    {
+      "id": "62a7ffbb12c9ffde14f7c11593e4f984fb0f45287166d37ff1a7e65f76d4e6ad",
+      "url": "https://github.com/AhmadWaleed/chore",
+      "title": "GitHub - AhmadWaleed/chore: An Elegant and simple tool for executing common tasks on remote servers.",
+      "date_published": "2021-09-27T00:00:00Z",
+      "date_modified": "2021-09-27T00:00:00Z"
+    },
+    {
+      "id": "63a98cf1a8185ce4c16918e5a288017c6313d43dc7195e5660cb7459f4f3e390",
+      "url": "https://github.com/nikolaydubina/go-recipes",
+      "title": "GitHub - nikolaydubina/go-recipes: 🦩 Tools for Go projects",
+      "date_published": "2022-10-11T00:00:00Z",
+      "date_modified": "2022-10-11T00:00:00Z"
+    },
+    {
+      "id": "666698bbd54065bacbc88f74167f425e7c3611403fda67ba8bd5a9dfdda972eb",
+      "url": "https://ply.readthedocs.io/en/latest/ply.html",
+      "title": "PLY (Python Lex-Yacc) — ply 4.0 documentation",
+      "date_published": "2021-10-15T00:00:00Z",
+      "date_modified": "2021-10-15T00:00:00Z"
+    },
+    {
+      "id": "683052d3412db69e69d27d9bc624e6a5e1a66e99ae080f3b0e2257bcfb3d2cc7",
+      "url": "https://philpearl.github.io/post/perf_time/",
+      "title": "Faster time parsing · Phil Pearl's Blog",
+      "date_published": "2021-10-09T00:00:00Z",
+      "date_modified": "2021-10-09T00:00:00Z"
+    },
+    {
+      "id": "6a7ac89b9d1661055a5cb5020c5c4a3b8c2b513624c98c834149925c7fb3b962",
+      "url": "http://www.ruanyifeng.com/blog/2018/01/assembly-language-primer.html",
+      "title": "汇编语言入门教程 - 阮一峰的网络日志",
+      "date_published": "2022-10-12T00:00:00Z",
+      "date_modified": "2022-10-12T00:00:00Z"
+    },
+    {
+      "id": "6bd48e63ada6156395b7edf07d4d6b7c79ed27a628a8c501c1201354f641cab6",
+      "url": "https://tech.meituan.com/2022/04/28/composable-architecture-in-bff.html",
+      "title": "标准化思想及组装式架构在后端BFF中的实践",
+      "date_published": "2022-05-09T00:00:00Z",
+      "date_modified": "2022-05-09T00:00:00Z"
+    },
+    {
+      "id": "6dc14db4edd871ae1afd46f8e7bff13e0f34f2ad2043d73d914ba24becca042f",
+      "url": "https://sspai.com/post/68711",
+      "title": "数字存储完全指南 01：储存设备的诞生与历史 - 少数派",
+      "date_published": "2021-10-09T00:00:00Z",
+      "date_modified": "2021-10-09T00:00:00Z"
+    },
+    {
+      "id": "6f4e073237bda1c9b7e9abca68768e52fb9042234ce5b3502beae000c5028727",
+      "url": "https://dev.to/30mp/how-to-improve-your-problem-solving-and-analysis-skills-4mfi",
+      "title": "How to improve your problem-solving (and analysis) skills - DEV Community",
+      "date_published": "2021-10-14T00:00:00Z",
+      "date_modified": "2021-10-14T00:00:00Z"
+    },
+    {
+      "id": "773b411f6071431e7114c950066c70c237a6d87991c8d271d5b6a614c46c5c09",
+      "url": "https://mp.weixin.qq.com/s/hwTdALHFbMHPRzJEYqvaVA",
+      "title": "Recoil 状态管理方案的浅入浅出",
+      "date_published": "2022-10-14T03:56:46Z",
+      "date_modified": "2022-10-14T03:56:46Z"
+    },
+    {
+      "id": "7778f96352f506257c5cf52b5af6e905c815d3f43d72c1dc52b93346ec99f400",
+      "url": "https://github.com/containers/youki",
+      "title": "GitHub - containers/youki: A container runtime written in Rust",
+      "date_published": "2021-09-29T00:00:00Z",
+      "date_modified": "2021-09-29T00:00:00Z"
+    },
+    {
+      "id": "7dffe548e3b2c36490cb495cc7b1350d2f145ed67543190d6a0cfeeb2222d02a",
+      "url": "https://mp.weixin.qq.com/s/ds6QkVrBwcurxp3RkvZe8Q",
+      "title": "探索现代的移动网络",
+      "date_published": "2022-10-18T06:59:15Z",
+      "date_modified": "2022-10-18T06:59:15Z"
+    },
+    {
+      "id": "7e6116659e9ce32387974d149c6de4b889a5a55ea4bab06276fef4ba1ba09e27",
+      "url": "https://mp.weixin.qq.com/s/WEO1y8vg21CXlix8wO28hw",
+      "title": "做出让人爱不释手的基础软件：可观测性和可交互性",
+      "date_published": "2021-10-19T00:00:00Z",
+      "date_modified": "2021-10-19T00:00:00Z"
+    },
+    {
+      "id": "84492437284bf30dfc2d9d6b5d2646856dadd5994b1c43ec58ed05b35bce3558",
+      "url": "http://arthurchiao.art/blog/how-nat-traversal-works-zh/",
+      "title": "[译] NAT 穿透是如何工作的：技术原理及企业级实践（Tailscale, 2020）",
+      "date_published": "2022-04-11T00:00:00Z",
+      "date_modified": "2022-04-11T00:00:00Z"
+    },
+    {
+      "id": "8701a2b01664de2f5ebea85033da39db54cb9f949e806da1e42d57d37636b4c0",
+      "url": "https://github.com/immersive-translate/immersive-translate",
+      "title": "GitHub - immersive-translate/immersive-translate: Immersive Dual Web Page Translation Extension - 沉浸式双语网页翻译扩展",
+      "date_published": "2023-02-21T09:17:33Z",
+      "date_modified": "2023-02-21T09:17:33Z"
+    },
+    {
+      "id": "8916396fb65ad7aa37307bd623086347b2c313415d4909c0455e94f2abbc443a",
+      "url": "https://www.infoq.cn/article/YTcVJ1qZ595B7CwpVfyK",
+      "title": "10 个角度分析软件工程师应该知道的 100 件事-InfoQ",
+      "date_published": "2021-09-22T00:00:00Z",
+      "date_modified": "2021-09-22T00:00:00Z"
+    },
+    {
+      "id": "8d93f88b9010fc5814256b0306cbe0d3853773c91ee5a1acb716da7e0ce44ff5",
+      "url": "https://mp.weixin.qq.com/s/nT0AGtxqCNGR_jwRp_Y63g",
+      "title": "因为地球越转越慢，互联网可能会崩溃",
+      "date_published": "2023-01-13T04:46:19Z",
+      "date_modified": "2023-01-13T04:46:19Z"
+    },
+    {
+      "id": "915a6886c30bd96a44c10cb052b76d7520a85dc1b38129a1341fcad0c4511293",
+      "url": "https://dev.to/johnjvester/composite-requests-in-salesforce-are-a-great-idea-17lj",
+      "title": "Composite Requests in Salesforce Are a Great Idea - DEV Community",
+      "date_published": "2021-10-11T00:00:00Z",
+      "date_modified": "2021-10-11T00:00:00Z"
+    },
+    {
+      "id": "99fb1c7a8819a2fb23bbff4a9cfcb19f89d7b8cf51bf3ab881e19dcfae2d001b",
+      "url": "https://blog.gimo.me/posts/auto-generating-cover-for-post/",
+      "title": "给博客文章自动生成分享图 - Yuanji's Blog",
+      "date_published": "2021-10-13T00:00:00Z",
+      "date_modified": "2021-10-13T00:00:00Z"
+    },
+    {
+      "id": "a20f786d25292b1d8530fc44cb2928db4bd2c2d357a69a45f220fc10d5e9f336",
+      "url": "https://www.infoq.cn/article/L15P1O5PDwNwZa1rZI7U",
+      "title": "ClickHouse 宣布独立成立公司，首轮获 3 亿融资-InfoQ",
+      "date_published": "2021-09-22T00:00:00Z",
+      "date_modified": "2021-09-22T00:00:00Z"
+    },
+    {
+      "id": "a5abb9ea4fabf73c9b6f87d86d2fde0c76437fa38478049ce7e65c22346ecac5",
+      "url": "https://github.com/wader/ansisvg",
+      "title": "GitHub - wader/ansisvg: Convert ANSI output to SVG",
+      "date_published": "2021-10-12T00:00:00Z",
+      "date_modified": "2021-10-12T00:00:00Z"
+    },
+    {
+      "id": "a71aa057b873883e9859446a3a8df0fa6b3e89eb75dc49448ca19a58234c3ecc",
+      "url": "https://hackersandslackers.com/python-poetry-package-manager/",
+      "title": "Package Python Projects the Proper Way with Poetry",
+      "date_published": "2021-09-18T00:00:00Z",
+      "date_modified": "2021-09-18T00:00:00Z"
+    },
+    {
+      "id": "b0b5c790cd01cb8466808649e33a150d5aed9e8bfced90e09576ed54412eb6f1",
+      "url": "https://www.bilibili.com/video/BV1dz411B7xk/",
+      "title": "2010年李彦宏 和马化腾  PK  马云   直至今天现实打脸_哔哩哔哩_bilibili",
+      "date_published": "2023-01-13T07:16:31Z",
+      "date_modified": "2023-01-13T07:16:31Z"
+    },
+    {
+      "id": "b4fc09b362cafe445560273970aaeeb5bbe554cf52f87d5c3086caf774051f14",
+      "url": "https://keg.cs.tsinghua.edu.cn/",
+      "title": "知识工程研究室 – Knowledge Engineering Group",
+      "date_published": "2022-11-14T06:55:48Z",
+      "date_modified": "2022-11-14T06:55:48Z"
+    },
+    {
+      "id": "b68c38b2c80e40cac774b1550b33414e583d4d244da21d734a5dd34277cfd407",
+      "url": "https://github.com/tom-doerr/zsh_codex",
+      "title": "GitHub - tom-doerr/zsh_codex",
+      "date_published": "2021-09-27T00:00:00Z",
+      "date_modified": "2021-09-27T00:00:00Z"
+    },
+    {
+      "id": "bd0d44b8c8888df9ca360e95cbac500aac87d994724e4789e24b623dba9797a9",
+      "url": "https://www.v2ex.com/t/887582",
+      "title": "拼多多是怎么做到分享的助力链接域名不是自己的呢？ - V2EX",
+      "date_published": "2022-10-17T10:48:10Z",
+      "date_modified": "2022-10-17T10:48:10Z"
+    },
+    {
+      "id": "c130ce19c003f2f584d11873b255c71925e4671c6452a4eddf3bf8b8dfdb2c6f",
+      "url": "https://github.com/xiaoluoboding/bookmark.style",
+      "title": "GitHub - xiaoluoboding/bookmark.style: 🪄 Turn any link into a stylish visual web bookmark, one-click to copy the beautiful web bookmark image.",
+      "date_published": "2022-10-18T11:29:45Z",
+      "date_modified": "2022-10-18T11:29:45Z"
+    },
+    {
+      "id": "ca2ddd8c61eac48bf10add901c9f5c9611d729b082720142e84e459b589948b1",
+      "url": "https://outti.me/6FE23FD0-22F4-4BDE-9F2B-72C0E5180C2C/",
+      "title": "将博客开在Web3.0上",
+      "date_published": "2023-01-30T02:56:10Z",
+      "date_modified": "2023-01-30T02:56:10Z"
+    },
+    {
+      "id": "cc81c8042fc14eb635590fbf5687cf95b710563e58c88c8c92e82056107286c8",
+      "url": "https://css-tricks.com/technical-writing-for-developers/",
+      "title": "Technical Writing for Developers | CSS-Tricks - CSS-Tricks",
+      "date_published": "2022-10-11T00:00:00Z",
+      "date_modified": "2022-10-11T00:00:00Z"
+    },
+    {
+      "id": "cf9daace49e1452879bf11ffc964c1ec84e436bde4fc2fa0e99f92164c5db8db",
+      "url": "https://mp.weixin.qq.com/s/5erBLSxZ0HLurrbne5V9kA",
+      "title": "B站直播的自研P2P实践 | 助力S12英雄联盟总决赛",
+      "date_published": "2022-11-08T09:29:39Z",
+      "date_modified": "2022-11-08T09:29:39Z"
+    },
+    {
+      "id": "d2b2c8d615503c0f7843e1f7ba40a66e64a10cbea401e15bfe89119e753cf671",
+      "url": "https://golangweekly.com/issues/410",
+      "title": "Golang Weekly Issue 410: May 6, 2022",
+      "date_published": "2022-05-07T00:00:00Z",
+      "date_modified": "2022-05-07T00:00:00Z"
+    },
+    {
+      "id": "d441e40692e102d7a42d494c4e8bb41389f4af8ca1e140c3f2c7eea42354d781",
+      "url": "https://colobu.com/2018/12/18/dive-into-sync-mutex/",
+      "title": "sync.mutex 源代码分析",
+      "date_published": "2021-09-18T00:00:00Z",
+      "date_modified": "2021-09-18T00:00:00Z"
+    },
+    {
+      "id": "d5893648dfe9f7c1ecf63ec1218195daeec515d002097e90be01e5345b28c239",
+      "url": "https://luolei.org/home-network-1/",
+      "title": "装修笔记：从0到1打造家庭弱电方案（上篇） - 罗磊的独立博客",
+      "date_published": "2022-10-13T10:43:39Z",
+      "date_modified": "2022-10-13T10:43:39Z"
+    },
+    {
+      "id": "dd062fd8a02b911f752f7d3cc124ee6e79d1811e031d9e927146dac5af212734",
+      "url": "https://danpetrov.xyz/programming/2021/12/30/telegram-google-translate.html",
+      "title": "How Telegram Messenger circumvents Google Translate's API | DanPetrov",
+      "date_published": "2022-04-15T00:00:00Z",
+      "date_modified": "2022-04-15T00:00:00Z"
+    },
+    {
+      "id": "e40ae2bee8c1cf10f9a67c4a0b276227e9fada33d4246e7c846b6d9da4211fb2",
+      "url": "https://coolshell.cn/articles/17010.html",
+      "title": "Docker基础技术：Linux Namespace（上） | 酷 壳 - CoolShell",
+      "date_published": "2021-10-12T00:00:00Z",
+      "date_modified": "2021-10-12T00:00:00Z"
+    },
+    {
+      "id": "e503ba42a9379b0280f95cc3992c603277e1e62d8d32567fb6060e9f91eb19cc",
+      "url": "https://www.bilibili.com/video/BV1cB4y177QR/",
+      "title": "锟斤拷�⊠是怎样炼成的——中文显示“⼊”门指南【柴知道】_哔哩哔哩_bilibili",
+      "date_published": "2022-10-14T08:15:53Z",
+      "date_modified": "2022-10-14T08:15:53Z"
+    },
+    {
+      "id": "e6d948ec8b812fe943fbd49475a34bd07fff25a58947d98872e260d5b798a821",
+      "url": "https://mp.weixin.qq.com/s/AJ4IBgYJ-Mq9OSICG0hRCA",
+      "title": "我的信息流 2023.1",
+      "date_published": "2023-01-13T02:26:00Z",
+      "date_modified": "2023-01-13T02:26:00Z"
+    },
+    {
+      "id": "f47e5638939c399354f3d6b0d2f904ec365bf73032bdc6ef339e996cdf34c2e9",
+      "url": "https://github.com/xakep666/unusual_generics",
+      "title": "GitHub - xakep666/unusual_generics: Collection of unusual generics usecases in Go",
+      "date_published": "2021-09-26T00:00:00Z",
+      "date_modified": "2021-09-26T00:00:00Z"
+    },
+    {
+      "id": "f96e57a224795e6c974368783037a5d1cc8dc0adf32e37948f2e0ee17a3e3422",
+      "url": "https://mazzo.li/posts/fast-pipes.html",
+      "title": "How fast are Linux pipes anyway?",
+      "date_published": "2022-06-06T00:00:00Z",
+      "date_modified": "2022-06-06T00:00:00Z"
+    }
+  ]
+}
